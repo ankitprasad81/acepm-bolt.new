@@ -54,7 +54,7 @@ const Features = () => {
   ];
 
   return (
-    <section className="py-20 lg:py-28 bg-white">
+    <section className="py-20 lg:py-28 bg-white dark:bg-slate-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-16">
@@ -64,12 +64,13 @@ const Features = () => {
             </span>
           </div>
           <h2 className="text-4xl lg:text-5xl font-bold text-slate-900 mb-6">
+          <h2 className="text-4xl lg:text-5xl font-bold text-slate-900 dark:text-white mb-6">
             Everything you need to
             <span className="block bg-gradient-to-r from-purple-600 to-indigo-600 bg-clip-text text-transparent">
               ace your projects
             </span>
           </h2>
-          <p className="text-xl text-slate-600 max-w-3xl mx-auto">
+          <p className="text-xl text-slate-600 dark:text-slate-300 max-w-3xl mx-auto">
             Our comprehensive suite of tools empowers teams to deliver exceptional results 
             with unprecedented efficiency and collaboration.
           </p>
@@ -80,7 +81,7 @@ const Features = () => {
           {features.map((feature, index) => (
             <div
               key={index}
-              className={`group relative ${feature.bgColor} ${feature.borderColor} border rounded-2xl p-8 hover:shadow-xl transition-all duration-300 hover:-translate-y-2`}
+              className={`group relative ${feature.bgColor} dark:bg-slate-800 ${feature.borderColor} dark:border-slate-700 border rounded-2xl p-8 hover:shadow-xl dark:hover:shadow-2xl transition-all duration-300 hover:-translate-y-2`}
             >
               {/* Icon */}
               <div className={`inline-flex items-center justify-center w-14 h-14 bg-gradient-to-r ${feature.color} rounded-xl mb-6 group-hover:scale-110 transition-transform duration-300`}>
@@ -88,15 +89,15 @@ const Features = () => {
               </div>
 
               {/* Content */}
-              <h3 className="text-xl font-bold text-slate-900 mb-4 group-hover:text-purple-600 transition-colors duration-300">
+              <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-4 group-hover:text-purple-600 dark:group-hover:text-purple-400 transition-colors duration-300">
                 {feature.title}
               </h3>
-              <p className="text-slate-600 leading-relaxed">
+              <p className="text-slate-600 dark:text-slate-300 leading-relaxed">
                 {feature.description}
               </p>
 
               {/* Hover Effect */}
-              <div className="absolute inset-0 bg-gradient-to-r from-purple-600/5 to-indigo-600/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              <div className="absolute inset-0 bg-gradient-to-r from-purple-600/5 to-indigo-600/5 dark:from-purple-400/10 dark:to-indigo-400/10 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
             </div>
           ))}
         </div>

@@ -30,7 +30,7 @@ const Testimonials = () => {
   ];
 
   return (
-    <section className="py-20 lg:py-28 bg-white">
+    <section className="py-20 lg:py-28 bg-white dark:bg-slate-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-16">
@@ -40,12 +40,13 @@ const Testimonials = () => {
             </span>
           </div>
           <h2 className="text-4xl lg:text-5xl font-bold text-slate-900 mb-6">
+          <h2 className="text-4xl lg:text-5xl font-bold text-slate-900 dark:text-white mb-6">
             What our customers
             <span className="block bg-gradient-to-r from-purple-600 to-indigo-600 bg-clip-text text-transparent">
               are saying
             </span>
           </h2>
-          <p className="text-xl text-slate-600 max-w-3xl mx-auto">
+          <p className="text-xl text-slate-600 dark:text-slate-300 max-w-3xl mx-auto">
             Don't just take our word for it. Here's what industry leaders 
             have to say about their experience with AcePM.
           </p>
@@ -56,11 +57,11 @@ const Testimonials = () => {
           {testimonials.map((testimonial, index) => (
             <div
               key={index}
-              className="group bg-gradient-to-br from-purple-50 to-indigo-50 rounded-2xl p-8 border border-purple-100 hover:shadow-xl transition-all duration-300 hover:-translate-y-2 relative overflow-hidden"
+              className="group bg-gradient-to-br from-purple-50 to-indigo-50 dark:from-slate-800 dark:to-slate-700 rounded-2xl p-8 border border-purple-100 dark:border-slate-600 hover:shadow-xl dark:hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 relative overflow-hidden"
             >
               {/* Quote Icon */}
               <div className="absolute top-4 right-4 opacity-20">
-                <Quote className="w-12 h-12 text-purple-600" />
+                <Quote className="w-12 h-12 text-purple-600 dark:text-purple-400" />
               </div>
 
               {/* Rating */}
@@ -71,7 +72,7 @@ const Testimonials = () => {
               </div>
 
               {/* Content */}
-              <blockquote className="text-slate-700 leading-relaxed mb-8 relative z-10">
+              <blockquote className="text-slate-700 dark:text-slate-300 leading-relaxed mb-8 relative z-10">
                 "{testimonial.content}"
               </blockquote>
 
@@ -83,20 +84,20 @@ const Testimonials = () => {
                   className="w-12 h-12 rounded-full object-cover border-2 border-white shadow-md"
                 />
                 <div>
-                  <div className="font-semibold text-slate-900 group-hover:text-purple-600 transition-colors duration-300">
+                  <div className="font-semibold text-slate-900 dark:text-white group-hover:text-purple-600 dark:group-hover:text-purple-400 transition-colors duration-300">
                     {testimonial.name}
                   </div>
-                  <div className="text-sm text-slate-600">
+                  <div className="text-sm text-slate-600 dark:text-slate-400">
                     {testimonial.role}
                   </div>
-                  <div className="text-sm text-purple-600 font-medium">
+                  <div className="text-sm text-purple-600 dark:text-purple-400 font-medium">
                     {testimonial.company}
                   </div>
                 </div>
               </div>
 
               {/* Hover Effect */}
-              <div className="absolute inset-0 bg-gradient-to-r from-purple-600/5 to-indigo-600/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl"></div>
+              <div className="absolute inset-0 bg-gradient-to-r from-purple-600/5 to-indigo-600/5 dark:from-purple-400/10 dark:to-indigo-400/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl"></div>
             </div>
           ))}
         </div>
@@ -116,6 +117,7 @@ const Testimonials = () => {
                 Start Free Trial
               </button>
               <button className="text-white hover:text-purple-100 font-semibold px-8 py-4 rounded-full border-2 border-white/30 hover:border-white/50 transition-all duration-200">
+              <button className="text-white hover:text-purple-100 dark:hover:text-purple-200 font-semibold px-8 py-4 rounded-full border-2 border-white/30 hover:border-white/50 transition-all duration-200">
                 View Case Studies
               </button>
             </div>

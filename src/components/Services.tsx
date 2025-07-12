@@ -34,22 +34,24 @@ const Services = () => {
   ];
 
   return (
-    <section className="py-20 lg:py-28 bg-gradient-to-br from-slate-50 to-purple-50">
+    <section className="py-20 lg:py-28 bg-gradient-to-br from-slate-50 to-purple-50 dark:from-slate-800 dark:to-slate-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-16">
           <div className="inline-flex items-center space-x-2 bg-white px-4 py-2 rounded-full border border-purple-200 mb-6 shadow-sm">
+          <div className="inline-flex items-center space-x-2 bg-white dark:bg-slate-800 px-4 py-2 rounded-full border border-purple-200 dark:border-purple-600 mb-6 shadow-sm">
             <span className="text-sm font-medium text-purple-700">
               Professional Services
             </span>
           </div>
           <h2 className="text-4xl lg:text-5xl font-bold text-slate-900 mb-6">
+          <h2 className="text-4xl lg:text-5xl font-bold text-slate-900 dark:text-white mb-6">
             Expert guidance for
             <span className="block bg-gradient-to-r from-purple-600 to-indigo-600 bg-clip-text text-transparent">
               project excellence
             </span>
           </h2>
-          <p className="text-xl text-slate-600 max-w-3xl mx-auto">
+          <p className="text-xl text-slate-600 dark:text-slate-300 max-w-3xl mx-auto">
             Our team of certified project management experts provides personalized 
             guidance to ensure your success from day one.
           </p>
@@ -60,7 +62,7 @@ const Services = () => {
           {services.map((service, index) => (
             <div
               key={index}
-              className="group bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 border border-slate-200 hover:border-purple-200"
+              className="group bg-white dark:bg-slate-800 rounded-2xl p-8 shadow-lg hover:shadow-2xl dark:hover:shadow-2xl transition-all duration-300 border border-slate-200 dark:border-slate-700 hover:border-purple-200 dark:hover:border-purple-600"
             >
               {/* Header */}
               <div className="flex items-start space-x-4 mb-6">
@@ -68,10 +70,10 @@ const Services = () => {
                   <service.icon className="w-7 h-7 text-white" />
                 </div>
                 <div className="flex-1">
-                  <h3 className="text-2xl font-bold text-slate-900 mb-2 group-hover:text-purple-600 transition-colors duration-300">
+                  <h3 className="text-2xl font-bold text-slate-900 dark:text-white mb-2 group-hover:text-purple-600 dark:group-hover:text-purple-400 transition-colors duration-300">
                     {service.title}
                   </h3>
-                  <p className="text-slate-600 leading-relaxed">
+                  <p className="text-slate-600 dark:text-slate-300 leading-relaxed">
                     {service.description}
                   </p>
                 </div>
@@ -82,14 +84,14 @@ const Services = () => {
                 {service.features.map((feature, featureIndex) => (
                   <div key={featureIndex} className="flex items-center space-x-3">
                     <div className="w-2 h-2 bg-gradient-to-r from-purple-500 to-indigo-500 rounded-full"></div>
-                    <span className="text-slate-700 font-medium">{feature}</span>
+                    <span className="text-slate-700 dark:text-slate-300 font-medium">{feature}</span>
                   </div>
                 ))}
               </div>
 
               {/* CTA */}
               <div className="mt-8">
-                <button className="text-purple-600 hover:text-purple-700 font-semibold group-hover:underline transition-all duration-200">
+                <button className="text-purple-600 dark:text-purple-400 hover:text-purple-700 dark:hover:text-purple-300 font-semibold group-hover:underline transition-all duration-200">
                   Learn More →
                 </button>
               </div>
@@ -98,11 +100,11 @@ const Services = () => {
         </div>
 
         {/* Bottom Section */}
-        <div className="mt-20 text-center bg-white rounded-2xl p-12 shadow-lg border border-slate-200">
-          <h3 className="text-3xl font-bold text-slate-900 mb-4">
+        <div className="mt-20 text-center bg-white dark:bg-slate-800 rounded-2xl p-12 shadow-lg border border-slate-200 dark:border-slate-700">
+          <h3 className="text-3xl font-bold text-slate-900 dark:text-white mb-4">
             Need a custom solution?
           </h3>
-          <p className="text-xl text-slate-600 mb-8 max-w-2xl mx-auto">
+          <p className="text-xl text-slate-600 dark:text-slate-300 mb-8 max-w-2xl mx-auto">
             Our enterprise team can create tailored solutions that fit your unique 
             business requirements and scale with your organization.
           </p>
@@ -110,7 +112,7 @@ const Services = () => {
             <button className="bg-gradient-to-r from-purple-600 to-indigo-600 text-white px-8 py-4 rounded-full font-semibold hover:from-purple-700 hover:to-indigo-700 transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl">
               Contact Sales
             </button>
-            <button className="text-slate-700 hover:text-purple-600 font-semibold px-8 py-4 rounded-full border-2 border-slate-200 hover:border-purple-300 transition-all duration-200">
+            <button className="text-slate-700 dark:text-slate-300 hover:text-purple-600 dark:hover:text-purple-400 font-semibold px-8 py-4 rounded-full border-2 border-slate-200 dark:border-slate-600 hover:border-purple-300 dark:hover:border-purple-500 transition-all duration-200">
               Schedule Demo
             </button>
           </div>

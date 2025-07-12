@@ -58,7 +58,7 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="bg-slate-900 text-white">
+    <footer className="bg-slate-900 dark:bg-slate-950 text-white">
       {/* Main Footer */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid lg:grid-cols-5 gap-8">
@@ -66,6 +66,7 @@ const Footer = () => {
           <div className="lg:col-span-2 space-y-6">
             <Logo />
             <p className="text-slate-300 leading-relaxed max-w-md">
+            <p className="text-slate-300 dark:text-slate-400 leading-relaxed max-w-md">
               AcePM empowers teams worldwide to deliver exceptional projects 
               with AI-powered insights, seamless collaboration, and intelligent automation.
             </p>
@@ -74,15 +75,15 @@ const Footer = () => {
             <div className="space-y-3">
               <div className="flex items-center space-x-3">
                 <Mail className="w-5 h-5 text-purple-400" />
-                <span className="text-slate-300">hello@acepm.com</span>
+                <span className="text-slate-300 dark:text-slate-400">hello@acepm.com</span>
               </div>
               <div className="flex items-center space-x-3">
                 <Phone className="w-5 h-5 text-purple-400" />
-                <span className="text-slate-300">+1 (555) 123-4567</span>
+                <span className="text-slate-300 dark:text-slate-400">+1 (555) 123-4567</span>
               </div>
               <div className="flex items-center space-x-3">
                 <MapPin className="w-5 h-5 text-purple-400" />
-                <span className="text-slate-300">San Francisco, CA</span>
+                <span className="text-slate-300 dark:text-slate-400">San Francisco, CA</span>
               </div>
             </div>
 
@@ -93,7 +94,7 @@ const Footer = () => {
                   key={index}
                   href={social.href}
                   aria-label={social.label}
-                  className="w-10 h-10 bg-slate-800 rounded-lg flex items-center justify-center hover:bg-purple-600 transition-colors duration-200"
+                  className="w-10 h-10 bg-slate-800 dark:bg-slate-900 rounded-lg flex items-center justify-center hover:bg-purple-600 dark:hover:bg-purple-700 transition-colors duration-200"
                 >
                   <social.icon className="w-5 h-5" />
                 </a>
@@ -112,7 +113,7 @@ const Footer = () => {
                   <li key={linkIndex}>
                     <a
                       href="#"
-                      className="text-slate-300 hover:text-purple-400 transition-colors duration-200"
+                      className="text-slate-300 dark:text-slate-400 hover:text-purple-400 dark:hover:text-purple-300 transition-colors duration-200"
                     >
                       {link}
                     </a>
@@ -125,7 +126,7 @@ const Footer = () => {
       </div>
 
       {/* Newsletter Section */}
-      <div className="border-t border-slate-800">
+      <div className="border-t border-slate-800 dark:border-slate-700">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
           <div className="flex flex-col lg:flex-row items-center justify-between space-y-4 lg:space-y-0">
             <div className="text-center lg:text-left">
@@ -133,6 +134,7 @@ const Footer = () => {
                 Stay updated with AcePM
               </h3>
               <p className="text-slate-300">
+              <p className="text-slate-300 dark:text-slate-400">
                 Get the latest product updates, tips, and industry insights.
               </p>
             </div>
@@ -140,7 +142,7 @@ const Footer = () => {
               <input
                 type="email"
                 placeholder="Enter your email"
-                className="px-4 py-3 bg-slate-800 border border-slate-700 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:border-purple-500 focus:ring-1 focus:ring-purple-500 flex-1 lg:w-80"
+                className="px-4 py-3 bg-slate-800 dark:bg-slate-900 border border-slate-700 dark:border-slate-600 rounded-lg text-white placeholder-slate-400 dark:placeholder-slate-500 focus:outline-none focus:border-purple-500 focus:ring-1 focus:ring-purple-500 flex-1 lg:w-80"
               />
               <button className="bg-gradient-to-r from-purple-600 to-indigo-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-indigo-700 transition-all duration-200 whitespace-nowrap">
                 Subscribe
@@ -151,20 +153,21 @@ const Footer = () => {
       </div>
 
       {/* Bottom Bar */}
-      <div className="border-t border-slate-800">
+      <div className="border-t border-slate-800 dark:border-slate-700">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
           <div className="flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0">
             <div className="text-slate-400 text-sm">
+            <div className="text-slate-400 dark:text-slate-500 text-sm">
               © 2024 AcePM. All rights reserved.
             </div>
             <div className="flex items-center space-x-6 text-sm">
-              <a href="#" className="text-slate-400 hover:text-purple-400 transition-colors duration-200">
+              <a href="#" className="text-slate-400 dark:text-slate-500 hover:text-purple-400 dark:hover:text-purple-300 transition-colors duration-200">
                 Terms of Service
               </a>
-              <a href="#" className="text-slate-400 hover:text-purple-400 transition-colors duration-200">
+              <a href="#" className="text-slate-400 dark:text-slate-500 hover:text-purple-400 dark:hover:text-purple-300 transition-colors duration-200">
                 Privacy Policy
               </a>
-              <a href="#" className="text-slate-400 hover:text-purple-400 transition-colors duration-200">
+              <a href="#" className="text-slate-400 dark:text-slate-500 hover:text-purple-400 dark:hover:text-purple-300 transition-colors duration-200">
                 Cookie Policy
               </a>
             </div>
